@@ -7,38 +7,29 @@ body {
     transition: background 0.5s, color 0.5s;
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
-
 header {
-   
     background: #1e1e1e;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.5s, color 0.5s;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
+ 
 
 header .logo ,h2 {
+    text-align: center;
+    align-items: center;
+     align-content: center;
     font-size: 24px;
     font-weight: bold;
     color: #ffcf6c;
-    transition: color 0.5s;
-    text-align: center;
-   
+    transition: color 0.5s;   
 }
-h2{
-    padding-top: 55px;
-}
-
 header .logo:hover{
     cursor: pointer;
     font-size: 28px;
     color: #ffce6c9f;
     transition: all 0.5s;
-}
+} 
 nav ul li a {
     position: relative; /* Set the link as a relative container */
     text-decoration: none; /* Remove the default underline */
@@ -72,8 +63,11 @@ nav ul li a:not(:hover)::after {
 }
 
 header nav ul {
-    display: flex;
     list-style: none;
+    display: flex
+;
+    justify-content: center;
+    padding: 0;
 }
 
 header nav ul li {
@@ -116,41 +110,40 @@ header .theme-toggle {
     height: 250px; /* Adjust card height */
     overflow: hidden; /* Ensure no content spills out */
     border-radius: 10px;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card-front, .card-back {
+.card-front  {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     border-radius: 8px;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     transition: transform 0.6s ease;
     box-sizing: border-box; /* Avoid content overflow due to padding */
 }
-
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+.h2{
+    color: black;
+}
 .card-front {
-    background: #ffcf6c;
+    background: #f7bd03;
     color: #121212;
 }
-
-.card-back {
-    background: #121212;
-    color: white;
-    border: #ffcf6c 5px solid;
-    transform: rotateY(180deg);
+.project-card:hover{
+    transform: scale(1.1);
+    transition: all 1s;
 }
 
-.project-card:hover .card-front {
-    transform: rotateY(180deg);
-}
 
-.project-card:hover .card-back {
-    transform: rotateY(0);
-}
+
+
 /* Light Mode */
 body.light-mode {
     background: #f4f4f4;
@@ -170,9 +163,6 @@ body.light-mode footer {
 
 body.light-mode .logo {
     color:#ffcf6c; /* Adjusted for light mode */
-}
-body.light-mode #hero{
-    color: #ffffff;
 }
 
 body.light-mode nav ul li a {
@@ -202,21 +192,26 @@ body.light-mode .theme-toggle {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
-    height: 50vh;
+    background-color: #f7bd03;
+    height: 80vh;
+    display: flex;
     text-align: center;
-    padding: 100px 20px;
+    justify-content: space-around;
+    /* padding: 100px 20px; */
    
   
 }
-
+ .top{
+    align-content: center;
+ }
 #hero h1 {
     font-size: 48px;
+    color: #121212;
  
 }
 
 #hero .highlight {
-    color: #ffcf6c;
+    color: #ffffff;
 }
 
 #hero .btn {
@@ -276,12 +271,13 @@ body.light-mode .theme-toggle {
     max-width: 50%;
 }
 .img1{
-    width: 250px;
-    height: 100%;
+    padding: 50px;
+    width: 500px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 60px;
     object-fit: cover;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 
@@ -339,9 +335,8 @@ body.light-mode .theme-toggle {
 }
 /* contact */
 #contact{
-    display: flex;
   padding: 20px;
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+background-color: #f7bd03;
 
 }
 #contact h2:hover{
@@ -377,114 +372,36 @@ cursor: pointer;
     background-color: #ffce6c;
  }
 #contact button{
-    align-items: center;
-    display: flex;
-    margin-top: 10px;
-    margin-left: 5px;
-    padding: 10px 10px;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
     background: #ffcf6c;
     color: black;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 25px;
     border: none;
     font-weight: bold;
     transition: background 0.5s;
 }
 #contact button:hover{
     background:#121212;
-    color: #f1f1f1;
+    color: #ffcf6c;
     transition: all 0.5s;
     cursor: pointer;
 }
 .contact-container{
-    width: 230px;
+    width: 250px;
     border-radius: 10px;
-    padding: 30px;
-    background-color:rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    background-color:#121212;
 
-}
-.contact2{
-    width:830px;
-    height: 620px;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-top: 120px;
-    padding: 30px;
-    background-color:rgba(0, 0, 0, 0.1);
-}
-.skills-container{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    width: 610px;
-    
-}
-.skills{
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-
-    
-}
-.show{
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease;
-    margin-left: 20px;
-    margin-top: 20px;
-    text-align: center;
-    align-items: center;
-    border-radius: 10px;
-   width:fit-content;
-   padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.show:hover {
-    transform: translateY(-10px);
-}
-.show img {
- width: 80px;
- height: 80px;
-}
-.name{
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    height: 40px;
-    width:800px;
-    cursor: pointer;
-}
-.message{
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    height: 80px;
-    width:800px;
-    cursor: pointer;
-}
-.word{
-width: 80px;
-line-height: 5px;
-}
-.word b{
-font-size: smaller;
-}
-.word span{
-    font-size: xx-small;
-}
-.word p{
-    font-size: xx-small;
-}
-.flex{
-    display: flex;
-  
 }
 .contact-container img{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 .btn-main{
-    width: 245px;
+    width: 200px;
     height: 50px;
 }
 /* Footer */
@@ -499,35 +416,18 @@ footer {
     header {
         flex-direction: column;
     }
-    #contact{
-        display: block;
-    
-    }
-    .conc{
-        display: flex;
-        justify-content: space-around;
-    }
-.contact2{
-    width: 500px;
-    margin-left: 0px;
+#hero{
+    display: block;
 }
-.name{
-    width: fit-content;
+.img1{
+    width: 350px;
 }
-.message{
-    width: fit-content;
+.flex{
+    display: block;
 }
+
 
     header nav ul.active {
         display: flex;
-    }
-}
-@media (max-width:640px) {
-    .contact2{
-        width: 300px;
-        margin-left: 0px;
-    }
-    .conc{
-        display: block;
     }
 }
