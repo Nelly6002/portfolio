@@ -124,9 +124,6 @@ header .theme-toggle {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     transition: transform 0.6s ease;
     box-sizing: border-box; /* Avoid content overflow due to padding */
@@ -136,13 +133,41 @@ header .theme-toggle {
     background: #ffcf6c;
     color: #121212;
 }
+.card-front img{
+    width: 250px;
+    border-radius: 10px;
+    height: 120px;
+}
 
+.card-back .flex {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    gap: 10px; /* Add some space between the icon and text */
+}
+
+.card-back .flex a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Inherit the color from the parent */
+}
+
+.card-back .flex a img {
+    width: 30px; /* Adjust the size of the GitHub icon */
+    height: 30px;
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.card-back .flex a:hover {
+    color: #ffcf6c; /* Change color on hover */
+}
 .card-back {
     background: #121212;
     color: white;
     border: #ffcf6c 5px solid;
     transform: rotateY(180deg);
 }
+
 
 .project-card:hover .card-front {
     transform: rotateY(180deg);
@@ -426,7 +451,7 @@ cursor: pointer;
 
     
 }
-.show{
+.show{  
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
